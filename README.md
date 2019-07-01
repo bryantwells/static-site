@@ -1,3 +1,3 @@
-watch with `npm run dev`
+watch: `npm run dev`
 
-build with `npm run build`
+build: `npm run build`
