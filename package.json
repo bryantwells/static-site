@@ -4,7 +4,7 @@
     "scripts": {
         "dev": "npm-run-all -p watch:*",
         "build": "npm-run-all -p build:*",
-        "watch:static": "npm run build:static -w",
+        "watch:static": "cpx 'src/**/*.!(js|scss)' dist -w",
         "watch:scss": "chokidar 'src/scss/**/*.scss' -c 'npm run build:scss'",
         "watch:js": "watchify src/js/main.js -o dist/assets/js/main.js -t [ babelify --presets [@babel/preset-env] ] -v",
         "build:static": "cpx 'src/**/*.!(js|scss)' dist",
